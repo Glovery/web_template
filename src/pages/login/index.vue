@@ -21,16 +21,19 @@
 </template>
 <script setup>
 import { defineComponent, reactive } from 'vue'
+import userStore from '@/store/index'
 
 defineComponent({
     name: 'LoginPage',
 })
+const user = userStore()
 const loginForm = reactive({
     username: '',
     password: '',
 })
 const handleLogin = () => {
     console.log('处理登录方法')
+    user.login(loginForm)
 }
 </script>
 <style lang="scss" scoped>
