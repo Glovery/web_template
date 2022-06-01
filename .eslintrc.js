@@ -37,5 +37,13 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: ['vue'],
-    rules: {},
+    rules: {
+        'no-param-reassign': [
+            'error',
+            {
+                props: true,
+                ignorePropertyModificationsFor: ['e', 'ctx', 'req', 'config', 'res', 'request', 'response', 'state'],
+            },
+        ],
+    },
 }
