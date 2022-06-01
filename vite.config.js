@@ -20,7 +20,7 @@ export default defineConfig({
         }),
     ],
     resolve: {
-        alias: { components: './src/components', '@': './src', store: './src/store' },
+        alias: { components: '/src/components', '@': '/src', store: '/src/store' },
     },
     css: {
         preprocessorOptions: {

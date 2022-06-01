@@ -7,9 +7,11 @@ const whiteList = ['/login', '/error']
 router.beforeEach((to, from, next) => {
     Nprogress.start()
     const hasToken = 'xxxx'
+    console.log(whiteList)
     if (!whiteList.includes(to.path) && hasToken) {
         next()
     } else if (whiteList.includes(to.path)) {
+        console.log(whiteList.includes(to.path))
         next()
     } else {
         next('/login')
