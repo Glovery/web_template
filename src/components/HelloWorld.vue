@@ -1,11 +1,15 @@
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 defineProps({
     msg: String,
 })
+const { t } = useI18n()
+console.log(t('login.title'))
 
 const count = ref(0)
+const title = ref('')
 </script>
 
 <template>
@@ -23,6 +27,8 @@ const count = ref(0)
         |
         <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
     </p>
+
+    <p v-t="'login.title'"></p>
 
     <button type="button" @click="count++">count is: {{ count }}</button>
     <p>

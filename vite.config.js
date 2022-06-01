@@ -9,7 +9,7 @@ export default defineConfig({
     plugins: [
         vue(),
         AutoImport({
-            imports: ['vue', 'vue-router'],
+            imports: ['vue', 'vue-router', 'vue-i18n'],
             eslintrc: {
                 enabled: true,
             },
@@ -21,5 +21,12 @@ export default defineConfig({
     ],
     resolve: {
         alias: { components: './src/components', '@': './src', store: './src/store' },
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `@import '@/styles/variables.scss';`,
+            },
+        },
     },
 })
