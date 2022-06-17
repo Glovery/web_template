@@ -3,7 +3,7 @@
         <div class="logo-container">
             <img :src="imageUrl" alt="logo" class="logo" />
         </div>
-        <el-scrollbar>
+        <el-scrollbar wrap-class="scroller-wrapper">
             <el-menu
                 :default-active="activeMenu"
                 text-color="#fff"
@@ -58,6 +58,9 @@ getActiveMenu()
             width: 135px;
             vertical-align: middle;
         }
+    }
+    ::v-deep(.el-scrollbar) {
+        height: calc(100% - 160px);
     }
 }
 </style>
