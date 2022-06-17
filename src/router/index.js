@@ -16,11 +16,44 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        component: () => import('@/pages/home/index.vue'),
+        component: () => import('@/layout/index.vue'),
+        redirect: '/dashboard',
+        children: [
+            {
+                path: 'dashboard',
+                component: () => import('@/pages/home/index.vue'),
+                meta: {
+                    title: '首页',
+                    affix: true,
+                },
+            },
+        ],
+    },
+    {
+        path: '/test',
+        name: 'Test',
+        component: () => import('@/layout/index.vue'),
         meta: {
-            title: '首页',
-            affix: true,
+            title: '路由测试',
         },
+        children: [
+            {
+                path: 'test1',
+                component: () => import('@/pages/home/index.vue'),
+                meta: {
+                    title: 'test1',
+                    affix: true,
+                },
+            },
+            {
+                path: 'test2',
+                component: () => import('@/pages/home/index.vue'),
+                meta: {
+                    title: 'test2',
+                    affix: true,
+                },
+            },
+        ],
     },
 ]
 

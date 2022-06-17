@@ -19,7 +19,7 @@
         </el-form>
     </div>
 </template>
-<script setup>
+<script setup name="Login">
 import { defineComponent, reactive } from 'vue'
 import userStore from '@/store/index'
 
