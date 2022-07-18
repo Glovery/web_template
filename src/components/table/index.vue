@@ -7,8 +7,8 @@
                         config.formatFunction(row[config.columnKey]) || '--'
                     }}</span>
                     <div v-else-if="config.type === 'button'" class="flex-row-center">
-                        <el-button size="small">编辑</el-button>
-                        <el-button size="small">删除</el-button>
+                        <el-button size="small" type="primary">编辑</el-button>
+                        <el-button size="small" type="danger">删除</el-button>
                     </div>
                 </template>
             </el-table-column>

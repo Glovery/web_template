@@ -39,7 +39,7 @@ const routes = [
         children: [
             {
                 path: 'test1',
-                component: () => import('@/pages/home/index.vue'),
+                component: () => import('@/pages/card/index.vue'),
                 meta: {
                     title: 'test1',
                     affix: true,

@@ -3,7 +3,6 @@
         <g-header :active-tab="activeTab" :title="headerTitle" show-tabs :tabs-list="tabsList"></g-header>
         <main class="common-page-content">
             <g-table :table-config="tableConfig" :table-data="tableData"></g-table>
-            <!-- <g-card></g-card> -->
         </main>
         <footer>
             <g-pagination @current="handleCurrentChange" @size-change="handleSizeChange"></g-pagination>
@@ -12,13 +11,12 @@
 </template>
 
 <script setup>
-import { reactive, defineComponent, ref } from 'vue'
+import { ref } from 'vue'
 import GHeader from '@/components/header/index.vue'
 import GTable from '@/components/table/index.vue'
-// import GCard from '@/components/card/index.vue'
 import GPagination from '@/components/pagination/index.vue'
 
-defineComponent({
+defineOptions({
     name: 'HomePage',
 })
 
