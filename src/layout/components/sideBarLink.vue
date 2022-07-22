@@ -9,7 +9,6 @@
 
 <script setup>
 import { isExternal } from '@/utils/validate'
-import { defineProps } from 'vue'
 import { useRouter } from 'vue-router'
 
 const props = defineProps({

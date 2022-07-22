@@ -28,7 +28,7 @@
     </div>
 </template>
 <script setup>
-import { defineProps, ref } from 'vue'
+import { ref } from 'vue'
 import path from 'path-browserify'
 import { isExternal } from '@/utils/validate'
 import sideBarLink from './sideBarLink.vue'

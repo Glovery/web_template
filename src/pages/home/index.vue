@@ -11,12 +11,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import GHeader from '@/components/header/index.vue'
-import GTable from '@/components/table/index.vue'
-import GPagination from '@/components/pagination/index.vue'
+import { defineComponent, ref } from 'vue'
+import GHeader from 'components/header/index.vue'
+import GTable from 'components/table/index.vue'
+import GPagination from 'components/pagination/index.vue'
 
-defineOptions({
+defineComponent({
     name: 'HomePage',
 })
 
@@ -45,9 +45,7 @@ const tabsList = ref([
     },
 ])
 
-const formatSex = (sex) => {
-    return sex ? '男' : '女'
-}
+const formatSex = (sex) => (sex ? '男' : '女')
 
 const tableConfig = ref([
     {

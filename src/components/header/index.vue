@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import { defineComponent, defineProps, defineEmits, watch, ref } from 'vue'
+import { defineComponent, defineEmits, watch, ref } from 'vue'
 import { Search, MoreFilled, Plus } from '@element-plus/icons-vue'
 
 defineComponent({
